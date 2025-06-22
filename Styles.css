@@ -1,0 +1,78 @@
+/* Colores inspirados en la naturaleza y la tecnología */
+:root {
+    --verde-principal: #28a745; /* Verde Bootstrap success */
+    --verde-oscuro: #218838;
+    --verde-claro: #d4edda;
+    --naranja-acento: #ff5733; /* Un toque vibrante */
+    --gris-claro: #f8f9fa;
+    --gris-medio: #6c757d;
+    --azul-oscuro: #343a40;
+}
+
+/* Sobrescribe el color de fondo del botón primario de Bootstrap */
+.btn-primary {
+    background-color: var(--verde-principal);
+    border-color: var(--verde-principal);
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 8px; /* Bordes redondeados */
+}
+
+/* Estilos para el hover del botón */
+.btn-primary:hover {
+    background-color: var(--verde-oscuro);
+    border-color: var(--verde-oscuro);
+    transform: translateY(-3px); /* Pequeño levantamiento */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Sombra suave */
+}
+
+/* Estilos para las tarjetas (cards) */
+.card {
+    border-radius: 10px; /* Bordes redondeados para las tarjetas */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid var(--verde-claro); /* Borde sutil verde claro */
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Efecto de levantamiento en hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada */
+}
+
+/* Estilos para el encabezado de la navegación */
+.navbar-brand h1 {
+    font-size: 2rem; /* Tamaño de fuente para el título principal */
+    font-weight: bold;
+    color: white; /* Color blanco para el texto del título */
+}
+
+/* Media Query para pantallas pequeñas (ej. teléfonos) */
+@media (max-width: 768px) {
+    body {
+        background-color: var(--gris-claro); /* Color de fondo más claro en pantallas pequeñas */
+    }
+    .navbar-brand h1 {
+        font-size: 1.5rem; /* Ajusta el tamaño del título en la navegación */
+    }
+    .btn-primary {
+        background-color: var(--gris-medio); /* Gris en pantallas pequeñas para los botones */
+        border-color: var(--gris-medio);
+    }
+    .btn-primary:hover {
+        background-color: var(--azul-oscuro);
+        border-color: var(--azul-oscuro);
+    }
+}
+
+/* Estilos para el pie de página */
+.footer {
+    background-color: var(--gris-claro); /* Color de fondo claro */
+    border-top: 1px solid var(--verde-claro); /* Borde superior sutil */
+}
+
+.footer a {
+    color: var(--verde-principal); /* Color de enlace verde principal */
+}
+
+.footer a:hover {
+    color: var(--verde-oscuro); /* Color de enlace más oscuro al pasar el ratón */
+    text-decoration: underline;
+}
